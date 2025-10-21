@@ -1,71 +1,80 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SpotFood - Toko Makanan Lezat</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpotFood | Kuliner Khas Nusantara</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ======= HEADER ======= -->
   <header>
-    <h1>SpotFood</h1>
+    <div class="logo">SpotFood</div>
     <nav>
-      <a href="#">Beranda</a>
+      <a href="#beranda">Beranda</a>
       <a href="#menu">Menu</a>
       <a href="#kontak">Kontak</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <!-- ======= HERO SECTION ======= -->
+  <section class="hero" id="beranda">
     <h2>Selamat Datang di SpotFood 🍴</h2>
-    <p>Nikmati makanan lezat khas Nusantara, cukup pesan dari rumah!</p>
+    <p>Nikmati cita rasa klasik Nusantara dari dapur ke meja Anda.</p>
     <a href="#menu" class="btn">Lihat Menu</a>
   </section>
 
-  <section id="menu" class="menu-section">
+  <!-- ======= MENU FAVORIT ======= -->
+  <section class="menu-section" id="menu">
     <h2>Menu Favorit</h2>
     <div class="menu-container">
-      <div class="menu-item">
-        <img src="img/Nasi Brongkos.jpg" alt="Nasi Brongkos">
+      
+      <div class="menu-card">
+        <img src="https://i.pinimg.com/736x/35/64/0d/35640d7c5ce89a7dfc06b0dbcb2576b1.jpg" alt="Nasi Brongkos">
         <h3>Nasi Brongkos</h3>
-        <p>Rp28.000</p>
-        <button>Pesan Sekarang</button>
+        <p class="price">Rp28.000</p>
       </div>
 
-      <div class="menu-item">
-        <img src="img/Ayam Goreng Kalasan.jpg" alt="Ayam Goreng Kalasan">
+      <div class="menu-card">
+        <img src="https://i.pinimg.com/736x/bc/43/eb/bc43ebf665ec8ce7773a4a775ccad9fa.jpg" alt="Ayam Goreng Kalasan">
         <h3>Ayam Goreng Kalasan</h3>
-        <p>Rp25.000</p>
-        <button>Pesan Sekarang</button>
+        <p class="price">Rp25.000</p>
       </div>
 
-      <div class="menu-item">
-        <img src="img/Sate Klatak.jpg" alt="Sate Klatak">
+      <div class="menu-card">
+        <img src="https://i.pinimg.com/736x/17/56/1b/17561b66a2ddf038020cb0e948fc872b.jpg" alt="Sate Klatak">
         <h3>Sate Klatak</h3>
-        <p>Rp30.000</p>
-        <button>Pesan Sekarang</button>
+        <p class="price">Rp30.000</p>
       </div>
 
-      <div class="menu-item">
-        <img src="img/Gudeg.jpg" alt="Gudeg">
+      <div class="menu-card">
+        <img src="https://i.pinimg.com/736x/77/1e/b3/771eb3b257d6c13aeeef661f4ec3088c.jpg" alt="Gudeg">
         <h3>Gudeg</h3>
-        <p>Rp20.000</p>
-        <button>Pesan Sekarang</button>
+        <p class="price">Rp20.000</p>
       </div>
 
-      <div class="menu-item">
-        <img src="img/TempeTahu Bacem.jpg" alt="Tempe Tahu Bacem">
+      <div class="menu-card">
+        <img src="https://i.pinimg.com/736x/2c/bd/1e/2cbd1e27ee905ce7a55de8b504d9b75e.jpg" alt="Tempe Tahu Bacem">
         <h3>Tempe Tahu Bacem</h3>
-        <p>Rp15.000</p>
-        <button>Pesan Sekarang</button>
+        <p class="price">Rp15.000</p>
       </div>
+
     </div>
   </section>
 
-  <footer id="kontak">
-    <p>Hubungi kami di: <a href="mailto:spotfood@email.com">spotfood@email.com</a></p>
-    <p>© 2025 SpotFood. All Rights Reserved.</p>
+  <!-- ======= KONTAK ======= -->
+  <section class="kontak" id="kontak">
+    <h2>Hubungi Kami</h2>
+    <p>📍 Yogyakarta, Indonesia</p>
+    <p>📞 0812-3456-7890</p>
+    <p>📧 spotfood@kuliner.id</p>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <p>© 2025 SpotFood. Semua Hak Dilindungi.</p>
   </footer>
-  <script src="script.js"></script>
+
 </body>
 </html>
