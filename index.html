@@ -1,80 +1,172 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SpotFood | Kuliner Khas Nusantara</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpotFood - Restoran Modern</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header / Navigasi -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">SpotFood</div>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- ======= HEADER ======= -->
-  <header>
-    <div class="logo">SpotFood</div>
-    <nav>
-      <a href="#beranda">Beranda</a>
-      <a href="#menu">Menu</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
-  </header>
-
-  <!-- ======= HERO SECTION ======= -->
-  <section class="hero" id="beranda">
-    <h2>Selamat Datang di SpotFood 🍴</h2>
-    <p>Nikmati cita rasa klasik Nusantara dari dapur ke meja Anda.</p>
-    <a href="#menu" class="btn">Lihat Menu</a>
-  </section>
-
-  <!-- ======= MENU FAVORIT ======= -->
-  <section class="menu-section" id="menu">
-    <h2>Menu Favorit</h2>
-    <div class="menu-container">
-      
-      <div class="menu-card">
-        <img src="https://i.pinimg.com/736x/35/64/0d/35640d7c5ce89a7dfc06b0dbcb2576b1.jpg" alt="Nasi Brongkos">
-        <h3>Nasi Brongkos</h3>
-        <p class="price">Rp28.000</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="slider">
+        <div class="slide active">
+          <img src="img/header 1.jpg" alt="Makanan 1" />
+          <div class="hero-text">
+            <h1>Rasakan Lezatnya Hidangan Premium</h1>
+            <p>Dibuat dengan bahan pilihan dan cita rasa terbaik.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/header 2.jpg" alt="Makanan 2" />
+          <div class="hero-text">
+            <h1>Suasana Nyaman & Modern</h1>
+            <p>Nikmati waktu makanmu dengan suasana santai dan elegan.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/header 3.jpg" alt="Makanan 3" />
+          <div class="hero-text">
+            <h1>Tempat Favorit Pecinta Kuliner</h1>
+            <p>Kunjungi SpotFood dan temukan menu favoritmu hari ini.</p>
+          </div>
+        </div>
       </div>
+      <div class="hero-overlay"></div>
+      <button class="hero-btn">Pesan Sekarang</button>
+      <div class="dots"></div>
+    </section>
 
-      <div class="menu-card">
-        <img src="https://i.pinimg.com/736x/bc/43/eb/bc43ebf665ec8ce7773a4a775ccad9fa.jpg" alt="Ayam Goreng Kalasan">
-        <h3>Ayam Goreng Kalasan</h3>
-        <p class="price">Rp25.000</p>
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+      <h2>Menu Makanan</h2>
+      <div class="menu-container">
+        <div class="card">
+          <img src="img/Gudeg.jpg" alt="Gudeg" />
+          <h3>Gudeg</h3>
+          <p>Manis, legit, dan lembut — rasa klasik Jogja.</p>
+          <span class="price">Rp 15.000</span>
+          <div class="buttons">
+            <button class="btn">Pesan</button>
+            <button class="btn">Keranjang</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/Ayam Goreng Kalasan.jpg" alt="Ayam Goreng Kalasan" />
+          <h3>Ayam Goreng Kalasan</h3>
+          <p>Ayam empuk dengan bumbu rahasia turun-temurun.</p>
+          <span class="price">Rp 25.000</span>
+          <div class="buttons">
+            <button class="btn">Pesan</button>
+            <button class="btn">Keranjang</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/Nasi Brongkos.jpg" alt="Nasi Brongkos" />
+          <h3>Nasi Brongkos</h3>
+          <p>Perpaduan rasa gurih dan pedas khas Jogja.</p>
+          <span class="price">Rp 10.000</span>
+          <div class="buttons">
+            <button class="btn">Pesan</button>
+            <button class="btn">Keranjang</button>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="menu-card">
-        <img src="https://i.pinimg.com/736x/17/56/1b/17561b66a2ddf038020cb0e948fc872b.jpg" alt="Sate Klatak">
-        <h3>Sate Klatak</h3>
-        <p class="price">Rp30.000</p>
+    <!-- Feature Section -->
+    <section class="feature">
+      <div class="feature-content">
+        <img src="img/Makanan.jpg" alt="Chef" />
+        <div class="text">
+          <h2>Kualitas dan Cita Rasa</h2>
+          <p>
+            Setiap hidangan disiapkan dengan cinta dan keahlian oleh chef
+            berpengalaman.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="menu-card">
-        <img src="https://i.pinimg.com/736x/77/1e/b3/771eb3b257d6c13aeeef661f4ec3088c.jpg" alt="Gudeg">
-        <h3>Gudeg</h3>
-        <p class="price">Rp20.000</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>Tentang SpotFood</h2>
+      <p>
+        SpotFood hadir untuk memberikan pengalaman kuliner terbaik dengan cita
+        rasa yang tak terlupakan.
+      </p>
+      <div class="stats">
+        <div>
+          <h3>50+</h3>
+          <p>Menu Variatif</p>
+        </div>
+        <div>
+          <h3>4.9★</h3>
+          <p>Ulasan Pelanggan</p>
+        </div>
+        <div>
+          <h3>10K+</h3>
+          <p>Pelanggan Puas</p>
+        </div>
       </div>
+    </section>
 
-      <div class="menu-card">
-        <img src="https://i.pinimg.com/736x/2c/bd/1e/2cbd1e27ee905ce7a55de8b504d9b75e.jpg" alt="Tempe Tahu Bacem">
-        <h3>Tempe Tahu Bacem</h3>
-        <p class="price">Rp15.000</p>
-      </div>
+    <!-- Kontak Section -->
+    <section id="contact" class="contact">
+      <h2>Kontak Kami</h2>
+      <p>Email: spotfood@gmail.com | Telepon: +62 812-3456-7890 |</p>
+      <p>Jl. Narodo, Dusun Gandok, Catur Tunggal, Depok, Sleman, DIY - 55281</p>
+    </section>
 
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 SpotFood | Sultan Zohri | All rights reserved.</p>
+    </footer>
 
-  <!-- ======= KONTAK ======= -->
-  <section class="kontak" id="kontak">
-    <h2>Hubungi Kami</h2>
-    <p>📍 Yogyakarta, Indonesia</p>
-    <p>📞 0812-3456-7890</p>
-    <p>📧 spotfood@kuliner.id</p>
-  </section>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      const dotsContainer = document.querySelector(".dots");
+      const heroBtn = document.querySelector(".hero-btn");
 
-  <!-- ======= FOOTER ======= -->
-  <footer>
-    <p>© 2025 SpotFood. Semua Hak Dilindungi.</p>
-  </footer>
+      let index = 0;
 
-</body>
+      slides.forEach((_, i) => {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (i === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => showSlide(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = document.querySelectorAll(".dot");
+
+      function showSlide(i) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        dots.forEach((dot) => dot.classList.remove("active"));
+        slides[i].classList.add("active");
+        dots[i].classList.add("active");
+        index = i;
+      }
+
+      setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 4000);
+    </script>
+  </body>
 </html>
