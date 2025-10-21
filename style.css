@@ -1,4 +1,4 @@
-/* ======= RESET DASAR ======= */
+/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   color: #1b1b1b; /* hitam doff */
 }
 
-/* ======= HEADER ======= */
+/* ========== HEADER ========== */
 header {
   background-color: #1b1b1b;
   color: #f5f5f5;
@@ -21,6 +21,7 @@ header {
   padding: 18px 40px;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 header .logo {
@@ -40,10 +41,10 @@ nav a:hover {
   color: #ff6600;
 }
 
-/* ======= HERO SECTION ======= */
+/* ========== HERO SECTION ========== */
 .hero {
-  background-color: #1b1b1b; /* hitam doff */
-  color: #f5f5f5; /* putih doff */
+  background-color: #1b1b1b;
+  color: #f5f5f5;
   text-align: center;
   padding: 120px 20px;
 }
@@ -57,7 +58,7 @@ nav a:hover {
 .hero p {
   font-size: 18px;
   margin-bottom: 35px;
-  color: #e0e0e0; /* abu lembut biar tidak terlalu kontras */
+  color: #e0e0e0;
 }
 
 .btn {
@@ -74,9 +75,8 @@ nav a:hover {
   background-color: #e25500;
 }
 
-/* ======= MENU FAVORIT ======= */
+/* ========== MENU SECTION ========== */
 .menu-section {
-  background-color: #f5f5f5;
   text-align: center;
   padding: 80px 40px;
 }
@@ -85,4 +85,69 @@ nav a:hover {
   color: #1b1b1b;
   font-size: 32px;
   margin-bottom: 50px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.menu-card {
+  background-color: white;
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.menu-card img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.menu-card h3 {
+  margin: 15px 0 5px;
+  font-size: 18px;
+}
+
+.price {
+  color: #ff6600;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ========== KONTAK ========== */
+.kontak {
+  background-color: #1b1b1b;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.kontak h2 {
+  margin-bottom: 15px;
+}
+
+.kontak p {
+  margin: 8px 0;
+  color: #dcdcdc;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
 }
