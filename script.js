@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.2 } // muncul saat 20% elemen terlihat
+    { threshold: 0.1 } // muncul saat 10% elemen terlihat
   );
   fadeElements.forEach((el) => observer.observe(el));
 
