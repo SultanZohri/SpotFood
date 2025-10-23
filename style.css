@@ -155,6 +155,7 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
@@ -168,8 +169,8 @@ body {
 
 .slide {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -180,8 +181,8 @@ body {
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   filter: brightness(70%);
 }
@@ -250,13 +251,20 @@ body {
 
 /* Responsif Hero Section */
 @media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .hero {
     background-position: center top;
     height: 100vh;
   }
 
   .slide img {
-    object-position: center top; /* biar fokus gambar ke bagian atas */
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .hero-text {
