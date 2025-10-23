@@ -295,6 +295,9 @@ body {
     font-size: 0.9rem;
     padding: 10px 20px;
   }
+  .hero-btn:hover {
+    transform: translateX(-50%) scale(1.05);
+  }
 }
 
 /* Slider Dots */
