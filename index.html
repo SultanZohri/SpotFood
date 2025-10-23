@@ -10,8 +10,16 @@
     <!-- Header / Navigasi -->
     <header>
       <nav class="navbar">
-        <div class="logo">SpotFood</div>
-        <ul class="nav-links">
+        <a href="index.html" class="logo">SpotFood</a>
+
+        <!-- Tombol garis tiga -->
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
           <li><a href="#hero">Home</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#about">Tentang</a></li>
@@ -22,6 +30,7 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
+      <div class="hero-overlay"></div>
       <div class="slider">
         <div class="slide active">
           <img src="img/header 1.jpg" alt="Makanan 1" />
@@ -45,13 +54,13 @@
           </div>
         </div>
       </div>
-      <div class="hero-overlay"></div>
-      <button class="hero-btn">Pesan Sekarang</button>
+
+      <button class="hero-btn" href="#menu">Pesan Sekarang</button>
       <div class="dots"></div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="menu">
+    <section id="menu" class="menu fade-in">
       <h2>Menu Makanan</h2>
       <div class="menu-container">
         <div class="card">
@@ -86,26 +95,116 @@
             <button class="btn">Keranjang</button>
           </div>
         </div>
+
+        <div class="card">
+          <img src="img/Ayam Goreng Kalasan.jpg" alt="Mie Goreng Spesial" />
+          <h3>Mie Goreng Spesial</h3>
+          <p>Mie goreng pedas gurih dengan topping melimpah.</p>
+          <span class="price">Rp 18.000</span>
+          <div class="buttons">
+            <button class="btn">Pesan</button>
+            <button class="btn">Keranjang</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/Ayam Goreng Kalasan.jpg" alt="Soto Ayam" />
+          <h3>Soto Ayam</h3>
+          <p>Kuah hangat gurih dengan suwiran ayam kampung.</p>
+          <span class="price">Rp 12.000</span>
+          <div class="buttons">
+            <button class="btn">Pesan</button>
+            <button class="btn">Keranjang</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/Sate Klatak.jpg" alt="Ayam Bakar Madu" />
+          <h3>Ayam Bakar Madu</h3>
+          <p>Ayam bakar manis pedas dengan olesan madu premium.</p>
+          <span class="price">Rp 22.000</span>
+          <div class="buttons">
+            <button class="btn">Pesan</button>
+            <button class="btn">Keranjang</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/Ayam Goreng Kalasan.jpg" alt="Nasi Liwet" />
+          <h3>Nasi Liwet</h3>
+          <p>Nasi gurih khas Solo dengan lauk pauk lengkap.</p>
+          <span class="price">Rp 20.000</span>
+          <div class="buttons">
+            <button class="btn">Pesan</button>
+            <button class="btn">Keranjang</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/Ayam Goreng Kalasan.jpg" alt="Bakmi Jawa" />
+          <h3>Bakmi Jawa</h3>
+          <p>Mie rebus khas Jawa dengan cita rasa tradisional.</p>
+          <span class="price">Rp 17.000</span>
+          <div class="buttons">
+            <button class="btn">Pesan</button>
+            <button class="btn">Keranjang</button>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Feature Section -->
-    <section class="feature">
-      <div class="feature-content">
-        <img src="img/Makanan.jpg" alt="Chef" />
-        <div class="text">
-          <h2>Kualitas dan Cita Rasa</h2>
-          <p>
-            Setiap hidangan disiapkan dengan cinta dan keahlian oleh chef
-            berpengalaman.
-          </p>
+    <section class="feature fade-in">
+      <h2>Berita Makanan</h2>
+      <div class="feature-container">
+        <div class="feature-content">
+          <img src="img/Makanan.jpg" alt="Chef" />
+          <div class="text">
+            <h2>Kualitas dan Cita Rasa</h2>
+            <p>
+              Setiap hidangan disiapkan dengan cinta dan keahlian oleh chef
+              berpengalaman.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-content">
+          <img src="img/Makanan.jpg" alt="Chef" />
+          <div class="text">
+            <h2>Kualitas dan Cita Rasa</h2>
+            <p>
+              Setiap hidangan disiapkan dengan cinta dan keahlian oleh chef
+              berpengalaman.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-content">
+          <img src="img/Makanan.jpg" alt="Chef" />
+          <div class="text">
+            <h2>Kualitas dan Cita Rasa</h2>
+            <p>
+              Setiap hidangan disiapkan dengan cinta dan keahlian oleh chef
+              berpengalaman.
+            </p>
+          </div>
+        </div>
+        <div class="feature-content">
+          <img src="img/Makanan.jpg" alt="Chef" />
+          <div class="text">
+            <h2>Kualitas dan Cita Rasa</h2>
+            <p>
+              Setiap hidangan disiapkan dengan cinta dan keahlian oleh chef
+              berpengalaman.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-      <h2>Tentang SpotFood</h2>
+      <h1>Tentang SpotFood</h1>
       <p>
         SpotFood hadir untuk memberikan pengalaman kuliner terbaik dengan cita
         rasa yang tak terlupakan.
@@ -128,7 +227,7 @@
 
     <!-- Kontak Section -->
     <section id="contact" class="contact">
-      <h2>Kontak Kami</h2>
+      <h2>Kontak</h2>
       <p>Email: spotfood@gmail.com | Telepon: +62 812-3456-7890 |</p>
       <p>Jl. Narodo, Dusun Gandok, Catur Tunggal, Depok, Sleman, DIY - 55281</p>
     </section>
@@ -137,36 +236,6 @@
     <footer>
       <p>© 2025 SpotFood | Sultan Zohri | All rights reserved.</p>
     </footer>
-
-    <script>
-      const slides = document.querySelectorAll(".slide");
-      const dotsContainer = document.querySelector(".dots");
-      const heroBtn = document.querySelector(".hero-btn");
-
-      let index = 0;
-
-      slides.forEach((_, i) => {
-        const dot = document.createElement("span");
-        dot.classList.add("dot");
-        if (i === 0) dot.classList.add("active");
-        dot.addEventListener("click", () => showSlide(i));
-        dotsContainer.appendChild(dot);
-      });
-
-      const dots = document.querySelectorAll(".dot");
-
-      function showSlide(i) {
-        slides.forEach((slide) => slide.classList.remove("active"));
-        dots.forEach((dot) => dot.classList.remove("active"));
-        slides[i].classList.add("active");
-        dots[i].classList.add("active");
-        index = i;
-      }
-
-      setInterval(() => {
-        index = (index + 1) % slides.length;
-        showSlide(index);
-      }, 4000);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
