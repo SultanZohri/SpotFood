@@ -26,10 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
+          observer.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.3 } // muncul saat 30% elemen terlihat
+    { threshold: 0.2 } // muncul saat 20% elemen terlihat
   );
   fadeElements.forEach((el) => observer.observe(el));
 
@@ -47,4 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.classList.toggle("active");
     navLinks.classList.toggle("show");
   });
+});
+
+document.querySelector('.hero-btn').addEventListener('click', () => {
+  const menuSection = document.querySelector('#menu');
+  menuSection.scrollIntoView({ behavior: 'smooth' });
 });
