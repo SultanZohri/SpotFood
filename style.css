@@ -19,76 +19,95 @@
 body {
   background-color: #fff;
   color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
 }
 
 /* NAVBAR UTAMA */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 15px 50px;
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 15px 0;
   background: transparent;
-  transition: background 2s ease;
+  transition: background 0.5s ease, color 0.3s ease;
   z-index: 1000;
 }
 
-/* Efek background saat scroll */
 .navbar.scrolled {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
 }
 
-/* LOGO */
+/* Wrapper biar simetris */
+.ps-container {
+  width: 92%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
 .logo {
   font-size: 1.8em;
   font-weight: bold;
   text-decoration: none;
-  color: #fff;
-  transition: transform 0.2s ease-in-out;
-}
-
-.logo:hover {
-  transform: scale(1.25);
-}
-
-.navbar.scrolled .logo {
-  color: #fff;
-}
-
-/* NAV LINKS */
-.nav-links {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-}
-
-.nav-links li a {
   color: white;
+  transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+/* Scroll navbar logo change color */
+.navbar.scrolled .logo {
+  color: #ffffff;
+}
+.navbar.scrolled .logo:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.logo:hover {
+  color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.95);
+}
+
+/* Nav links */
+.ps-nav a {
+  margin-left: 22px;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
-  transition: transform 0.2s ease-in-out;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+/* Scroll navbar text change color */
+.navbar.scrolled .ps-nav a {
+  color: #ffffff;
+}
+.navbar.scrolled .ps-nav a.active {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.nav-links li:hover {
-  transform: scale(1.25);
+.navbar.scrolled .ps-nav a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.ps-nav a:hover {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-/* TOMBOL GARIS TIGA */
+.ps-nav a.active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tombol garis tiga */
 .menu-toggle {
   display: none;
   flex-direction: column;
-  cursor: pointer;
   gap: 5px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .menu-toggle span {
-  display: block;
   width: 25px;
   height: 3px;
   background-color: white;
@@ -96,7 +115,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Saat tombol aktif */
+/* Efek toggle */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -107,37 +126,28 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Saat muncul karena scroll */
-.menu-toggle.show {
-  display: flex;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* RESPONSIVE MODE */
+/* Responsive */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
-    opacity: 1;
-    pointer-events: auto;
   }
 
-  .nav-links {
+  .ps-nav {
     position: absolute;
     top: 70px;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
     flex-direction: column;
-    align-items: center;
-    width: 200px;
-    display: none;
+    background: rgba(0, 0, 0, 0.9);
+    width: 220px;
     border-radius: 10px;
     padding: 20px 0;
+    display: none;
+    text-align: center;
   }
 
-  .nav-links.show {
+  .ps-nav.show {
     display: flex;
-    animation: fadeIn 0.5s ease forwards;
+    animation: fadeIn 0.4s ease forwards;
   }
 
   @keyframes fadeIn {
@@ -149,6 +159,15 @@ body {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .ps-nav a {
+    color: white;
+    margin: 10px 0;
+  }
+
+  .ps-nav a:hover {
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -202,7 +221,7 @@ body {
   bottom: 25%;
   left: 10%;
   color: #ffffff;
-  z-index: 5;
+  z-index: 3;
   max-width: 600px;
 }
 
@@ -210,17 +229,18 @@ body {
   font-size: 2.5em;
   color: #ffffff;
   margin-bottom: 10px;
-  z-index: 5;
+  z-index: 3;
 }
 
 .hero-text p {
   font-size: 1.2em;
   color: #f5f5f5;
-  z-index: 5;
+  z-index: 3;
 }
 
 .hero-btn {
   position: absolute;
+  font-weight: bold;
   bottom: 15%;
   left: 10%;
   background: rgba(255, 255, 255, 0);
@@ -329,12 +349,12 @@ body {
 /* Menu Section */
 .menu {
   padding: 80px 40px;
-  text-align: center;
   background: #fff;
 }
 
 .menu h2 {
   margin-bottom: 40px;
+  text-align: center;
   font-size: 2em;
 }
 
@@ -346,6 +366,8 @@ body {
 }
 
 .card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   background: #fff;
   border: 1px solid #eee;
   border-radius: 10px;
@@ -356,7 +378,6 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease-in-out;
 }
-
 .card:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -388,25 +409,30 @@ body {
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
 }
 
 .btn {
+  font-weight: bold;
+  margin-top: 25px;
   background: #111;
   color: #fff;
   border: none;
-  padding: 8px 15px;
+  padding: 20px 25px;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn:hover {
   background: rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
 /* Feature Section */
 .feature {
-  padding: 80px 20px;
+  padding: 20px 20px;
+  border-top: 3px solid rgba(0, 0, 0, 0.02);
   text-align: center;
   background: #ffffff;
 }
