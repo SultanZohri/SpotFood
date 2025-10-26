@@ -10,30 +10,33 @@
     <!-- Header / Navigasi -->
     <header>
       <nav class="navbar">
-        <a href="index.html" class="logo">SpotFood</a>
+        <div class="ps-container">
+          <a href="index.html" class="logo">SpotFood</a>
 
-        <!-- Tombol garis tiga -->
-        <div class="menu-toggle" id="menuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
+          <!-- Tombol garis tiga -->
+          <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="ps-nav" id="navLinks">
+            <a href="#hero" class="active">Beranda</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">Tentang</a>
+            <a href="#contact">Kontak</a>
+            <a href="Pesanan/pesanan.html">Pesanan</a>
+          </div>
         </div>
-
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#contact">Kontak</a></li>
-        </ul>
       </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-      <div class="hero-overlay"></div>
       <div class="slider">
         <div class="slide active">
           <img src="img/header 1.jpg" alt="Makanan 1" />
+          <div class="hero-overlay"></div>
           <div class="hero-text">
             <h1>Rasakan Lezatnya Hidangan Premium</h1>
             <p>Dibuat dengan bahan pilihan dan cita rasa terbaik.</p>
@@ -41,6 +44,7 @@
         </div>
         <div class="slide">
           <img src="img/header 2.jpg" alt="Makanan 2" />
+          <div class="hero-overlay"></div>
           <div class="hero-text">
             <h1>Suasana Nyaman & Modern</h1>
             <p>Nikmati waktu makanmu dengan suasana santai dan elegan.</p>
@@ -48,6 +52,7 @@
         </div>
         <div class="slide">
           <img src="img/header 3.jpg" alt="Makanan 3" />
+          <div class="hero-overlay"></div>
           <div class="hero-text">
             <h1>Tempat Favorit Pecinta Kuliner</h1>
             <p>Kunjungi SpotFood dan temukan menu favoritmu hari ini.</p>
@@ -55,7 +60,7 @@
         </div>
       </div>
 
-      <button class="hero-btn" href="#menu">Pesan Sekarang</button>
+      <button class="hero-btn" href="#menu">Lihat Menu</button>
       <div class="dots"></div>
     </section>
 
@@ -67,11 +72,6 @@
           <img src="img/menu/Gudeg.jpg" alt="Gudeg" />
           <h3>Gudeg</h3>
           <p>Ikonik dari nangka muda dengan cita rasa manis-gurih khas</p>
-          <span class="price">Rp 18.000</span>
-          <div class="buttons">
-            <button class="btn">Pesan</button>
-            <button class="btn">Keranjang</button>
-          </div>
         </div>
 
         <div class="card">
@@ -81,33 +81,18 @@
           />
           <h3>Ayam Goreng Kalasan</h3>
           <p>Ayam empuk dengan bumbu rahasia turun-temurun</p>
-          <span class="price">Rp 22.000</span>
-          <div class="buttons">
-            <button class="btn">Pesan</button>
-            <button class="btn">Keranjang</button>
-          </div>
         </div>
 
         <div class="card">
           <img src="img/menu/Nasi Brongkos.jpg" alt="Nasi Brongkos" />
           <h3>Nasi Brongkos</h3>
           <p>Rasanya gurih, nikmat, dan berkelas seperti hidangan keraton!</p>
-          <span class="price">Rp 12.000</span>
-          <div class="buttons">
-            <button class="btn">Pesan</button>
-            <button class="btn">Keranjang</button>
-          </div>
         </div>
 
         <div class="card">
           <img src="img/menu/Sate Klatak.jpg" alt="Sate Klatak" />
           <h3>Sate Klatak</h3>
           <p>Khas Jogja dengan daging kambing muda yang empuk dan juicy!</p>
-          <span class="price">Rp 20.000</span>
-          <div class="buttons">
-            <button class="btn">Pesan</button>
-            <button class="btn">Keranjang</button>
-          </div>
         </div>
 
         <div class="card">
@@ -117,11 +102,6 @@
             Jajanan khas lereng Merapi yang bikin jatuh cinta sejak gigitan
             pertama.
           </p>
-          <span class="price">Rp 10.000</span>
-          <div class="buttons">
-            <button class="btn">Pesan</button>
-            <button class="btn">Keranjang</button>
-          </div>
         </div>
 
         <div class="card">
@@ -131,22 +111,12 @@
             Lele asap dalam kuah santan pedas-gurih, aroma smokey membuat selera
             melonjak!
           </p>
-          <span class="price">Rp 15.000</span>
-          <div class="buttons">
-            <button class="btn">Pesan</button>
-            <button class="btn">Keranjang</button>
-          </div>
         </div>
 
         <div class="card">
           <img src="img/menu/Tiwul.jpg" alt="Tiwul" />
           <h3>Tiwul</h3>
           <p>Singkong yang punya rasa manis alami dan tekstur lembut.</p>
-          <span class="price">Rp 14.000</span>
-          <div class="buttons">
-            <button class="btn">Pesan</button>
-            <button class="btn">Keranjang</button>
-          </div>
         </div>
 
         <div class="card">
@@ -156,11 +126,9 @@
             Rasanya gurih autentik dengan tekstur mie yang kenyal, cocok
             dinikmati kuah maupun goreng.
           </p>
-          <span class="price">Rp 17.000</span>
-          <div class="buttons">
-            <button class="btn">Pesan</button>
-            <button class="btn">Keranjang</button>
-          </div>
+        </div>
+        <div class="buttons">
+          <a href="Pesanan/pesanan.html" class="btn">Pesan Sekarang</a>
         </div>
       </div>
     </section>
