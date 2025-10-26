@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pemesanan • SpotFood</title>
+
+    <!-- Poppins font -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link rel="stylesheet" href="stylepesanan.css" />
+  </head>
+  <body>
+    <!-- Header (small) -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="../index.html" class="logo">SpotFood</a>
+
+          <div class="ps-nav" id="navLinks">
+            <a href="../index.html#hero">Beranda</a>
+            <a href="../index.html#menu">Menu</a>
+            <a href="../index.html#about">Tentang</a>
+            <a href="../index.html#contact">Kontak</a>
+            <a href="pesanan.html" class="active">Pesanan</a>
+          </div>
+
+          <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content: split layout (image left / content right) -->
+    <main class="ps-main" id="main">
+      <!-- Left: image panel -->
+      <aside class="image-panel" aria-hidden="true">
+        <div class="image-wrap">
+          <!-- gunakan path gambar yang kamu punya; fallback jika tidak ada -->
+          <img
+            src="../img/header 1.jpg"
+            alt="Foto kuliner SpotFood"
+            onerror="this.src='../img/default.jpg'"
+          />
+          <!-- soft overlay + vignette + edge blur (B3 style) -->
+          <div class="image-overlay"></div>
+          <div class="image-vignette"></div>
+        </div>
+
+        <!-- small caption/branding on image -->
+        <div class="image-caption">
+          <h2>SpotFood</h2>
+          <p>Rasakan cita rasa Nusantara — modern & elegan.</p>
+        </div>
+      </aside>
+
+      <!-- Right: menu list + actions -->
+      <section class="catalog">
+        <div class="ps-container catalog-inner">
+          <header class="catalog-header">
+            <h1 class="page-title">Pilih Menu</h1>
+            <p class="lead">
+              Tambahkan menu ke keranjang — ringkasan otomatis akan muncul di
+              kanan bawah.
+            </p>
+          </header>
+
+          <!-- Items grid -->
+          <div id="itemsGrid" class="items-grid" aria-live="polite">
+            <!-- akan di-inject oleh JS -->
+          </div>
+
+          <!-- summary strip (visible on wide screens as fixed aside is minimal in L-A) -->
+          <div class="summary-inline">
+            <div class="summary-left">
+              <div class="small">Subtotal</div>
+              <div id="subtotalTxt">Rp0</div>
+              <div class="small">Pajak (10%)</div>
+              <div id="taxTxt">Rp0</div>
+              <div class="small">Service (5%)</div>
+              <div id="serviceTxt">Rp0</div>
+            </div>
+            <div class="summary-right">
+              <label class="ongkir-label"
+                >Ongkir
+                <input id="ongkirInput" type="number" min="0" value="0" />
+              </label>
+              <div class="total-row">
+                <div>Total</div>
+                <div id="totalTxt">Rp0</div>
+              </div>
+              <div class="summary-actions">
+                <button id="openCartBtn" class="btn glass">
+                  Buka Keranjang
+                </button>
+                <button id="checkoutQuick" class="btn glass-outline">
+                  Checkout WA
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Cart slide-in panel (right) -->
+    <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+      <div class="cart-header">
+        <div>
+          <h3>Keranjang</h3>
+          <p class="muted small">Item yang dipilih</p>
+        </div>
+        <button id="closeCart" class="icon-btn" aria-label="Tutup keranjang">
+          ✕
+        </button>
+      </div>
+
+      <div id="cartItems" class="cart-items" role="region" aria-live="polite">
+        <!-- diisi oleh JS -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="calc">
+          <div class="row">
+            <span>Subtotal</span><span id="cartSubtotal">Rp0</span>
+          </div>
+          <div class="row">
+            <span>Pajak (10%)</span><span id="cartTax">Rp0</span>
+          </div>
+          <div class="row">
+            <span>Service (5%)</span><span id="cartService">Rp0</span>
+          </div>
+          <div class="row">
+            <span>Ongkir</span><span id="cartOngkir">Rp0</span>
+          </div>
+          <div class="row total">
+            <span>Total</span><span id="cartTotal">Rp0</span>
+          </div>
+        </div>
+
+        <form id="checkoutForm" class="checkout-form" onsubmit="return false;">
+          <label
+            >Nama Lengkap
+            <input id="custName" required placeholder="Nama lengkap" />
+          </label>
+
+          <label
+            >Telepon
+            <input id="custPhone" required placeholder="+62..." />
+          </label>
+
+          <label
+            >Alamat Lengkap
+            <textarea
+              id="custAddress"
+              rows="3"
+              required
+              placeholder="Alamat pengiriman"
+            ></textarea>
+          </label>
+
+          <label
+            >Catatan (opsional)
+            <textarea
+              id="custNotes"
+              rows="2"
+              placeholder="Contoh: tanpa sambal"
+            ></textarea>
+          </label>
+
+          <div class="checkout-actions">
+            <button id="sendEmailBtn" class="btn glass">Kirim via Email</button>
+            <button id="sendWA" class="btn glass">Checkout WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    <!-- Kontak Section -->
+    <section id="contact" class="contact">
+      <h2>Kontak</h2>
+      <p>Email: spotfood@gmail.com | Telepon: +62 812-3456-7890 |</p>
+      <p>Jl. Narodo, Dusun Gandok, Catur Tunggal, Depok, Sleman, DIY - 55281</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 SpotFood | Sultan Zohri | All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+
+    <!-- toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- EmailJS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <!-- main script -->
+    <script src="scriptpesanan.js"></script>
+  </body>
+</html>
